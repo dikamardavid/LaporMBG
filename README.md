@@ -42,6 +42,7 @@ Platform pelaporan dan pengawasan operasional program Makan Bergizi Gratis (MBG)
   - [](./docs/adr/0004-nextjs-postgres-single-db-multitenant.md)
   - [](./docs/adr/0005-nutrition-breakdown-and-visual-feedback.md)
   - [](./docs/adr/0006-otp-magiclink-school-auth.md)
+  - [](./docs/adr/0007-ds-microservice-fastapi-deviation.md)
 - **Daftar Tiket / Issues**: [](./docs/issues/)
 
 ---
@@ -54,3 +55,4 @@ Platform pelaporan dan pengawasan operasional program Makan Bergizi Gratis (MBG)
 - **Cache & Rate-Limiting**: Redis
 - **Offline Storage**: IndexedDB (PWA Service Worker)
 - **Security**: HMAC-SHA256 Signed Dynamic QR, Passwordless OTP/Magic Link, RBAC Middleware
+- **Data Science Services**: Standalone FastAPI (Python) microservices in Docker containers for analytics/ML workloads (e.g. `services/ds-plate-waste`), called via push-based REST from the Next.js backend — see [ADR-0007](./docs/adr/0007-ds-microservice-fastapi-deviation.md)
