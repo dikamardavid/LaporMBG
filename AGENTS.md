@@ -17,6 +17,7 @@ Before making any schema changes, designing API contracts, or writing UI compone
    - `0004`: Single Database Multi-Tenant Architecture (Next.js + Postgres + Prisma + Redis).
    - `0005`: Macronutrient AKG Breakdown & 4-Step Visual Feedback Flow.
    - `0006`: Passwordless OTP / Magic Link School Auth.
+   - `0007`: Data Science FastAPI Microservice Deviation (Python services under `services/`, stateless/push-based REST, no direct DB access).
 4. **Active Tickets & Backlog**: Check [`docs/issues/`](./docs/issues/) and [GitHub Issues](https://github.com/dikamardavid/LaporMBG/issues) for acceptance criteria.
 
 ---

@@ -1,0 +1,14 @@
+services:
+  ds-plate-waste:
+    build:
+      context: ./services/ds-plate-waste
+    ports:
+      - "8001:8001"
+    environment:
+      - APP_ENV=local
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8001/healthz')"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    # TODO(next-issue): add nextjs + postgres services once app/ and prisma/schema.prisma exist
