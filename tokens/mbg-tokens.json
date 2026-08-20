@@ -1,0 +1,202 @@
+{
+  "color": {
+    "brand": {
+      "primary": {
+        "value": "#059669",
+        "type": "color",
+        "description": "MBG Nutrition Fresh Green"
+      },
+      "primary-light": {
+        "value": "#10b981",
+        "type": "color"
+      },
+      "primary-dark": {
+        "value": "#047857",
+        "type": "color"
+      },
+      "surface": {
+        "value": "#ecfdf5",
+        "type": "color"
+      }
+    },
+    "bgn": {
+      "navy": {
+        "value": "#0f172a",
+        "type": "color",
+        "description": "Badan Gizi Nasional Official Navy"
+      },
+      "accent": {
+        "value": "#1e3a8a",
+        "type": "color"
+      },
+      "gold": {
+        "value": "#f59e0b",
+        "type": "color"
+      }
+    },
+    "state": {
+      "success": {
+        "value": "#10b981",
+        "type": "color"
+      },
+      "warning": {
+        "value": "#f59e0b",
+        "type": "color"
+      },
+      "danger": {
+        "value": "#ef4444",
+        "type": "color"
+      },
+      "info": {
+        "value": "#3b82f6",
+        "type": "color"
+      }
+    },
+    "plate-waste": {
+      "clean": {
+        "value": "#10b981",
+        "type": "color",
+        "description": "Habis Bersih (0% sisa)"
+      },
+      "low": {
+        "value": "#84cc16",
+        "type": "color",
+        "description": "Sisa Sedikit (<25%)"
+      },
+      "half": {
+        "value": "#f59e0b",
+        "type": "color",
+        "description": "Sisa Separuh (50%)"
+      },
+      "high": {
+        "value": "#ef4444",
+        "type": "color",
+        "description": "Sisa Banyak (>75%)"
+      }
+    },
+    "neutral": {
+      "white": {
+        "value": "#ffffff",
+        "type": "color"
+      },
+      "slate-50": {
+        "value": "#f8fafc",
+        "type": "color"
+      },
+      "slate-100": {
+        "value": "#f1f5f9",
+        "type": "color"
+      },
+      "slate-200": {
+        "value": "#e2e8f0",
+        "type": "color"
+      },
+      "slate-400": {
+        "value": "#94a3b8",
+        "type": "color"
+      },
+      "slate-600": {
+        "value": "#475569",
+        "type": "color"
+      },
+      "slate-800": {
+        "value": "#1e293b",
+        "type": "color"
+      },
+      "slate-900": {
+        "value": "#0f172a",
+        "type": "color"
+      }
+    }
+  },
+  "spacing": {
+    "xs": {
+      "value": "4px",
+      "type": "spacing"
+    },
+    "sm": {
+      "value": "8px",
+      "type": "spacing"
+    },
+    "md": {
+      "value": "16px",
+      "type": "spacing"
+    },
+    "lg": {
+      "value": "24px",
+      "type": "spacing"
+    },
+    "xl": {
+      "value": "32px",
+      "type": "spacing"
+    },
+    "2xl": {
+      "value": "48px",
+      "type": "spacing"
+    }
+  },
+  "borderRadius": {
+    "sm": {
+      "value": "6px",
+      "type": "borderRadius"
+    },
+    "md": {
+      "value": "12px",
+      "type": "borderRadius"
+    },
+    "lg": {
+      "value": "16px",
+      "type": "borderRadius"
+    },
+    "xl": {
+      "value": "24px",
+      "type": "borderRadius"
+    },
+    "full": {
+      "value": "9999px",
+      "type": "borderRadius"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "heading": {
+        "value": "Inter, system-ui, sans-serif",
+        "type": "fontFamilies"
+      },
+      "body": {
+        "value": "Inter, system-ui, sans-serif",
+        "type": "fontFamilies"
+      },
+      "kids": {
+        "value": "Plus Jakarta Sans, system-ui, sans-serif",
+        "type": "fontFamilies"
+      }
+    },
+    "fontSize": {
+      "caption": {
+        "value": "12px",
+        "type": "fontSizes"
+      },
+      "body": {
+        "value": "14px",
+        "type": "fontSizes"
+      },
+      "subheading": {
+        "value": "16px",
+        "type": "fontSizes"
+      },
+      "heading": {
+        "value": "20px",
+        "type": "fontSizes"
+      },
+      "display": {
+        "value": "28px",
+        "type": "fontSizes"
+      },
+      "kids-hero": {
+        "value": "36px",
+        "type": "fontSizes"
+      }
+    }
+  }
+}

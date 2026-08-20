@@ -21,7 +21,23 @@ module.exports = {
           navy: '#0f172a',
           accent: '#1e3a8a',
           gold: '#f59e0b',
-        }
+        },
+        platewaste: {
+          clean: '#10b981',
+          low: '#84cc16',
+          half: '#f59e0b',
+          high: '#ef4444',
+        },
+      },
+      borderRadius: {
+        sm: '6px',
+        md: '12px',
+        lg: '16px',
+        xl: '24px',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        kids: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
       },
     },
   },
