@@ -9,7 +9,10 @@
     "lint": "next lint",
     "prisma:generate": "prisma generate",
     "prisma:db:push": "prisma db push",
-    "seed": "node scripts/seed.js"
+    "seed": "tsx prisma/seed.ts"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
     "next": "^14.2.5",
@@ -22,7 +25,10 @@
     "canvas-confetti": "^1.9.3",
     "qrcode": "^1.5.3",
     "jsonwebtoken": "^9.0.2",
-    "@prisma/client": "^5.18.0"
+    "@prisma/client": "^5.18.0",
+    "jose": "^5.9.6",
+    "ioredis": "^5.4.1",
+    "nodemailer": "^6.9.15"
   },
   "devDependencies": {
     "typescript": "^5.5.4",
@@ -32,9 +38,11 @@
     "@types/qrcode": "^1.5.5",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/canvas-confetti": "^1.9.0",
+    "@types/nodemailer": "^6.4.16",
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.10",
     "autoprefixer": "^10.4.20",
-    "prisma": "^5.18.0"
+    "prisma": "^5.18.0",
+    "tsx": "^4.19.2"
   }
 }
