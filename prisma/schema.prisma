@@ -1,0 +1,79 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  BGN_ADMIN
+  BGN_AUDITOR
+  SPPG_ADMIN
+  SPPG_CHEF
+  SCHOOL_PIC
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String?  @unique
+  phone     String?  @unique
+  name      String
+  role      UserRole
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  sppg     Sppg?   @relation(fields: [sppgId], references: [id])
+  sppgId   String?
+  school   School? @relation(fields: [schoolId], references: [id])
+  schoolId String?
+
+  @@index([sppgId])
+  @@index([schoolId])
+}
+
+model Sppg {
+  id        String   @id @default(cuid())
+  name      String
+  code      String   @unique
+  address   String?
+  lat       Float?
+  lng       Float?
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  users    User[]
+  clusters ClusterMapping[]
+}
+
+model School {
+  id        String   @id @default(cuid())
+  name      String
+  code      String   @unique
+  address   String?
+  lat       Float    @default(0)
+  lng       Float    @default(0)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  users    User[]
+  clusters ClusterMapping[]
+}
+
+model ClusterMapping {
+  id        String   @id @default(cuid())
+  sppgId    String
+  schoolId  String
+  createdAt DateTime @default(now())
+
+  sppg   Sppg   @relation(fields: [sppgId], references: [id])
+  school School @relation(fields: [schoolId], references: [id])
+
+  @@unique([sppgId, schoolId])
+  @@index([sppgId])
+  @@index([schoolId])
+}
