@@ -40,3 +40,30 @@ Anda dapat langsung meng-inject seluruh Variable Collection (Warna, Spacing, Rad
 | **Plate Waste** | `PlateWaste/High-75pct` | `#ef4444` | Sisa Banyak (>75%) |
 | **Status** | `Status/Danger-Incident` | `#ef4444` | Indikasi insiden mutu pangan / basi |
 | **Status** | `Status/Warning-SLA` | `#f59e0b` | Peringatan timer SLA komplain SPPG |
+
+---
+
+## 📋 4. Eksekusi Desain Kitchen Manifest & Printable QR Stickers (GORE-18)
+
+Untuk tiket **[Issue #36 / GORE-18: Kitchen Manifest UX & Thermal/A4 Printable QR Sticker Layout]**:
+
+1. **Script Generator Canvas Figma**: [`tokens/figma-kitchen-manifest-script.js`](./figma-kitchen-manifest-script.js)
+2. **Dokumen Spesifikasi Desain Lengkap**: [`docs/design/02-kitchen-manifest-and-qr-sticker-spec.md`](../docs/design/02-kitchen-manifest-and-qr-sticker-spec.md)
+3. **Komponen & Preview Rute Next.js**:
+   - Tablet Manifest Station: [`/manifest/tablet`](../src/app/manifest/tablet/page.tsx)
+   - Print Preview Hub (Thermal 58mm, 80mm, A4 Sheet, Surat Jalan): [`/manifest/print`](../src/app/manifest/print/page.tsx)
+
+### Cara Eksekusi di Figma Console:
+1. Buka file Figma aktif.
+2. Buka **Console Figma** (`Option + Cmd + I` di Mac).
+3. Salin seluruh isi file [`tokens/figma-kitchen-manifest-script.js`](./figma-kitchen-manifest-script.js) dan tempel ke Console, lalu tekan **Enter**.
+4. ✨ **Hasil Otomatis:**
+   - Section baru **`[Explore] - Kitchen Manifest UX & QR Stickers - v1`** dibuat di luar wireflow utama.
+   - Master Components & Variants:
+     - `KitchenForm/TemperatureGauge` (Safe ≥60°C, Warning 50-59°C, Danger <50°C)
+     - `KitchenForm/TouchButton` (Primary, Secondary, Danger)
+     - `QRSticker/Thermal-58mm` (High-contrast 1-bit monochrome)
+     - `QRSticker/Thermal-80mm` (Standar kitchen receipt / label printer)
+   - Composed Tablet Screen (1024x768 landscape) untuk operasional dapur panas.
+   - Layout Cetak Siap Pakai: Stiker 58mm, 80mm, Lembar A4 Grid, dan Surat Jalan Serah Terima Makanan resmi kenegaraan.
+

@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media print {
+  @page {
+    margin: 0;
+    size: auto;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide navigation, buttons, and headers during print */
+  header,
+  nav,
+  button,
+  .print\\:hidden {
+    display: none !important;
+  }
+
+  .thermal-58mm-card,
+  .thermal-80mm-card,
+  .surat-jalan-a4,
+  .a4-sticker-sheet {
+    box-shadow: none !important;
+    margin: 0 auto !important;
+    page-break-inside: avoid !important;
+  }
+}
